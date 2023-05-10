@@ -14,4 +14,5 @@ class LoginActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
     }
     //for test commit from home
+    //for test commit from company
 }
