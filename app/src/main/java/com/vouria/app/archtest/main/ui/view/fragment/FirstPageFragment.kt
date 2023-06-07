@@ -8,9 +8,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.vouria.app.archtest.R
+import com.vouria.app.archtest.core.base.BaseFragment
 import com.vouria.app.archtest.databinding.FragmentFirstPageBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class FirstPageFragment : Fragment() {
+@AndroidEntryPoint
+class FirstPageFragment : BaseFragment<FragmentFirstPageBinding>() {
     private lateinit var binding: FragmentFirstPageBinding
 
     override fun onCreateView(

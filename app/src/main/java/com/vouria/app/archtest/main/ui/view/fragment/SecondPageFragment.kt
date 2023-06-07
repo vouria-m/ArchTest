@@ -7,9 +7,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.vouria.app.archtest.R
+import com.vouria.app.archtest.core.base.BaseFragment
+import com.vouria.app.archtest.databinding.FragmentFirstPageBinding
 import com.vouria.app.archtest.databinding.FragmentSecondPageBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class SecondPageFragment : Fragment() {
+@AndroidEntryPoint
+class SecondPageFragment : BaseFragment<FragmentSecondPageBinding>() {
     private lateinit var binding: FragmentSecondPageBinding
 
     override fun onCreateView(
@@ -20,5 +24,6 @@ class SecondPageFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
+
 
 }

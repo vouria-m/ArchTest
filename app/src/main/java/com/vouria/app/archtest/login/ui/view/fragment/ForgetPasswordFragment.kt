@@ -7,10 +7,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.vouria.app.archtest.R
+import com.vouria.app.archtest.core.base.BaseFragment
 import com.vouria.app.archtest.databinding.FragmentForgetPasswordBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
-class ForgetPasswordFragment : Fragment() {
+@AndroidEntryPoint
+class ForgetPasswordFragment : BaseFragment<FragmentForgetPasswordBinding>() {
 
     private lateinit var binding: FragmentForgetPasswordBinding
     override fun onCreateView(
